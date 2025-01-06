@@ -1,8 +1,8 @@
-local a = game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("ClosePanel")
+local a = game:GetService("CoreGui"):FindFirstChild("ClosePanel")
 if a then
     a:Destroy()
 end
-local b = game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("AdversitePanel")
+local b = game:GetService("CoreGui"):FindFirstChild("AdversitePanel")
 if b then
     b:Destroy()
 end
@@ -57,7 +57,7 @@ local t = Instance.new("ImageButton")
 local u = Instance.new("UICorner")
 local v = Instance.new("Frame")
 q.Name = "ClosePanel"
-q.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+q.Parent = game:GetService("CoreGui")
 r.Parent = q
 r.BackgroundColor3 = Color3.fromRGB(9, 8, 8)
 r.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -126,7 +126,7 @@ local D = Instance.new("TextButton")
 local E = Instance.new("TextLabel")
 local F = Instance.new("Frame")
 x.Name = "AdversitePanel"
-x.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+x.Parent = game:GetService("CoreGui")
 y.Name = "Adversite"
 y.Parent = x
 y.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
@@ -190,7 +190,7 @@ D.TextColor3 = Color3.fromRGB(166, 166, 166)
 D.TextSize = 14
 D.MouseButton1Click:Connect(
     function()
-        local b = game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("AdversitePanel")
+        local b = game:GetService("CoreGui"):FindFirstChild("AdversitePanel")
         if b then
             b:Destroy()
         end
